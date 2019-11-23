@@ -26,8 +26,13 @@ def calc_score(n_true_positives, n_truth, n_pred):
         detect_boxes : list of box-arrays
         true_boxes : list of box-arrays
     """
+    print("True positives:", n_true_positives)
+    print("n_pred:", n_pred)
+    print("n_truth:", n_truth)
     precision = n_true_positives / n_pred
     recall = n_true_positives / n_truth
+    print("Precision:", precision)
+    print("Recall:", recall)
     fscore = 2* precision * recall / (precision + recall)
     score = {"fscore": fscore, "precision": precision, "recall": recall}
     return score
