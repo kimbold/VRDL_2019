@@ -121,15 +121,17 @@ class YOLO(object):
                                                                      valid_img_folder,
                                                                      valid_ann_folder,
                                                                      is_only_detect)
-        
+        print("No error getting annotations")
         # 1. get batch generator
         train_batch_generator = self._get_batch_generator(train_annotations, batch_size, train_times, jitter=jitter)
         valid_batch_generator = self._get_batch_generator(valid_annotations, batch_size, valid_times, jitter=False)
-        
+        print("No error getting batch generator")
+
         # 2. To train model get keras model instance & loss fucntion
         model = self._yolo_network.get_model(first_trainable_layer)
         loss = self._get_loss_func(batch_size)
-        
+        print("No error getting keras model instance & loss fucntion")
+
         # 3. Run training loop
         train(model,
                 loss,
@@ -138,6 +140,7 @@ class YOLO(object):
                 learning_rate      = learning_rate, 
                 nb_epoch           = nb_epoch,
                 saved_weights_name = saved_weights_name)
+        print("No error running training loop")
 
     def _get_loss_func(self, batch_size):
         return self._yolo_loss.custom_loss(batch_size)
