@@ -10,7 +10,7 @@ def count_true_positives(detect_boxes, true_boxes, detect_labels=None, true_labe
         true_labels :
     """
     n_true_positives = 0
- 
+ 	print("Detect boxes:",detect_boxes,"True boxes", true_boxes)
     matcher = BoxMatcher(detect_boxes, true_boxes, detect_labels, true_labels)
     for i in range(len(detect_boxes)):
         matching_idx, iou = matcher.match_idx_of_box1_idx(i)
