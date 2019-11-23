@@ -1,5 +1,10 @@
 <annotation>
   <filename>2.png</filename>
+  <size>
+    <width>199</width>
+    <height>83</height>
+    <depth>3</depth>
+  </size>
   <object>
     <name>2</name>
     <bndbox>
