@@ -14,10 +14,10 @@
     },
     "train" : {
         "actual_epoch":         100,
-        "train_image_folder":   "../train/",
+        "train_image_folder":   "train/",
         "train_annot_folder":   "tests/dataset/svhn/anns/",
         "train_times":          5,
-        "valid_image_folder":   "../train/",
+        "valid_image_folder":   "train/",
         "valid_annot_folder":   "tests/dataset/svhn/anns/",
         "valid_times":          1,
         "batch_size":           2,
