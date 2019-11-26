@@ -42,7 +42,7 @@ def train(model,
                         callbacks        = _create_callbacks(saved_weights_name),                        
                         verbose          = 1,
                         workers          = 3,
-                        max_queue_size   = 8)
+                        max_queue_size   = 32)
     
     _print_time(time.time()-train_start)
 
